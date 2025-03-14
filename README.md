@@ -39,7 +39,7 @@
 </div>
 
 ###
-
+<hr>
 <p align="left">Formas de Contato:</p>
 
 ###
