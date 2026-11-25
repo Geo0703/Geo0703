@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geovane Augusto — Engenheiro de Software em Formação | Portfólio & Currículo</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              50: '#f0f4f8',
+              100: '#d9e2ec',
+              600: '#243b53',
+              700: '#1e3a5f',
+              800: '#102a43',
+              900: '#0b192c'
+            }
+          },
+          fontFamily: {
+            serif: ['Newsreader', 'Georgia', 'Cambria', 'serif'],
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap');
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    .glass-nav {
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+      }
+      section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden bg-[#F8FAFC] text-slate-900 dark:bg-[#090D16] dark:text-slate-100 antialiased transition-colors duration-200 selection:bg-navy-700 selection:text-white">
+
+  <!-- Barra de Navegação Executiva -->
+  <header class="no-print sticky top-0 z-40 glass-nav bg-white/90 dark:bg-[#090D16]/90 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+      <a href="#topo" class="flex items-center gap-3 shrink-0 group">
+        <span class="w-8 h-8 rounded-lg bg-navy-700 dark:bg-sky-600 text-white flex items-center justify-center font-serif text-sm font-bold tracking-tight shadow-sm">GA</span>
+        <div class="leading-tight">
+          <span class="block text-sm font-bold tracking-tight text-slate-900 dark:text-white">Geovane Augusto</span>
+          <span class="block text-[11px] font-mono text-slate-500 dark:text-slate-400">Software · Automação · Cloud</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-[13px] font-medium text-slate-600 dark:text-slate-300">
+        <a href="#sobre" class="hover:text-navy-700 dark:hover:text-sky-400 transition-colors">Sobre</a>
+        <a href="#experiencia" class="hover:text-navy-700 dark:hover:text-sky-400 transition-colors">Experiência</a>
+        <a href="#projetos" class="hover:text-navy-700 dark:hover:text-sky-400 transition-colors">Projetos</a>
+        <a href="#certificacoes" class="hover:text-navy-700 dark:hover:text-sky-400 transition-colors">Certificações</a>
+        <a href="#stack" class="hover:text-navy-700 dark:hover:text-sky-400 transition-colors">Stack</a>
+        <a href="#contato" class="hover:text-navy-700 dark:hover:text-sky-400 transition-colors">Contato</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <button id="downloadCvNav" type="button" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-navy-700 hover:bg-navy-800 dark:bg-sky-600 dark:hover:bg-sky-500 text-white shadow-sm transition-colors">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>Baixar CV (PDF)</span>
+        </button>
+        <button id="printBtn" type="button" title="Imprimir página" aria-label="Imprimir página" class="hidden lg:inline-flex p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <i data-lucide="printer" class="w-4 h-4"></i>
+        </button>
+        <button id="themeToggle" type="button" aria-label="Alternar tema" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <i id="themeIconSun" data-lucide="sun" class="w-4 h-4 hidden"></i>
+          <i id="themeIconMoon" data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <button id="mobileMenuBtn" type="button" aria-label="Abrir menu" class="md:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200">
+          <i data-lucide="menu" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#090D16] px-4 py-3 space-y-1 text-sm font-medium">
+      <a href="#sobre" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900">Sobre</a>
+      <a href="#experiencia" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900">Experiência</a>
+      <a href="#projetos" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900">Projetos</a>
+      <a href="#certificacoes" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900">Certificações</a>
+      <a href="#stack" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900">Stack</a>
+      <a href="#contato" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900">Contato</a>
+      <button id="downloadCvMobile" type="button" class="w-full text-left px-3 py-2 rounded-lg text-navy-700 dark:text-sky-400 font-semibold hover:bg-slate-100 dark:hover:bg-slate-900">
+        Baixar Currículo Formal (PDF)
+      </button>
+      <button id="printBtnMobile" type="button" class="w-full text-left px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900">
+        Imprimir Página
+      </button>
+    </div>
+  </header>
+
+  <main id="topo" class="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14 space-y-16">
+
+    <!-- Hero Executivo com Foto Profissional -->
+    <section class="relative overflow-hidden rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-6 sm:p-10 shadow-sm">
+      <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-navy-700 via-blue-600 to-sky-500"></div>
+
+      <div class="flex flex-col-reverse md:flex-row md:items-center justify-between gap-8 sm:gap-10">
+        <div class="space-y-5 flex-1">
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-navy-50 dark:bg-slate-800 text-navy-700 dark:text-sky-300 border border-navy-100 dark:border-slate-700">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>F1RST Digital Services (Grupo Santander)</span>
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+              <span>São Paulo, SP</span>
+            </span>
+          </div>
+
+          <div class="space-y-2">
+            <h1 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-slate-950 dark:text-white leading-[1.1]">
+              Geovane Augusto
+            </h1>
+            <p class="text-base sm:text-lg font-semibold text-navy-700 dark:text-sky-400">
+              Estagiário de Desenvolvimento · Back-End, Automação &amp; IA
+            </p>
+            <p class="text-xs sm:text-sm font-mono text-slate-500 dark:text-slate-400">
+              Java · Spring Boot · JUnit · Python · n8n · Agentes de IA · AWS
+            </p>
+          </div>
+
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
+            Graduando em Bacharelado em Sistemas de Informação na Universidade São Judas Tadeu (2024–2027), com mais de 2 anos de experiência prática construindo APIs em Java, testes automatizados e fluxos de automação inteligente.
+          </p>
+
+          <div class="no-print flex flex-wrap items-center gap-2.5 pt-1">
+            <button id="downloadCvHero" type="button" class="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-navy-700 hover:bg-navy-800 dark:bg-sky-600 dark:hover:bg-sky-500 text-white shadow-sm transition-colors">
+              <i data-lucide="file-down" class="w-4 h-4"></i>
+              <span>Baixar Currículo (PDF)</span>
+            </button>
+            <a href="https://www.linkedin.com/in/geovaneaugusto/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+              <i data-lucide="linkedin" class="w-4 h-4 text-blue-600 dark:text-sky-400"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/Geo0703" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              <span>GitHub</span>
+            </a>
+            <button id="copyEmailHero" type="button" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <span>E-mail</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Retrato Profissional -->
+        <div class="shrink-0 flex justify-center md:justify-end">
+          <img
+            src="./foto.jpg"
+            alt="Foto profissional de Geovane Augusto"
+            class="w-36 h-44 sm:w-44 sm:h-56 md:w-48 md:h-60 rounded-2xl object-cover object-top shadow-md ring-1 ring-slate-900/10 dark:ring-white/15 bg-slate-200 dark:bg-slate-800 max-w-full"
+          />
+        </div>
+      </div>
+
+      <!-- Indicadores Consolidados -->
+      <div class="mt-8 pt-6 border-t border-slate-200/80 dark:border-slate-800 grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="rounded-2xl bg-slate-50/90 dark:bg-slate-950/60 p-4 border border-slate-200/70 dark:border-slate-800/80">
+          <p class="font-serif text-2xl font-bold text-navy-700 dark:text-white">2+ anos</p>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Experiência prática em TI e Dev</p>
+        </div>
+        <div class="rounded-2xl bg-slate-50/90 dark:bg-slate-950/60 p-4 border border-slate-200/70 dark:border-slate-800/80">
+          <p class="font-serif text-2xl font-bold text-navy-700 dark:text-white">1º Lugar</p>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Hackathon IA e Automação</p>
+        </div>
+        <div class="rounded-2xl bg-slate-50/90 dark:bg-slate-950/60 p-4 border border-slate-200/70 dark:border-slate-800/80">
+          <p class="font-serif text-2xl font-bold text-navy-700 dark:text-white">15+</p>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Certificações técnicas</p>
+        </div>
+        <div class="rounded-2xl bg-slate-50/90 dark:bg-slate-950/60 p-4 border border-slate-200/70 dark:border-slate-800/80">
+          <p class="font-serif text-2xl font-bold text-navy-700 dark:text-white">11</p>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Repositórios públicos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre + Formação & Idiomas -->
+    <section id="sobre" class="scroll-mt-24 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-6 sm:p-8 shadow-sm space-y-4">
+        <div class="flex items-center gap-2.5 pb-3 border-b border-slate-100 dark:border-slate-800">
+          <i data-lucide="user-round" class="w-5 h-5 text-navy-700 dark:text-sky-400"></i>
+          <h2 class="font-serif text-2xl font-bold tracking-tight">Perfil Profissional</h2>
+        </div>
+        <div class="space-y-3.5 text-sm sm:text-[15px] text-slate-600 dark:text-slate-300 leading-relaxed">
+          <p>
+            Atuo como <strong class="text-slate-900 dark:text-white">Estagiário de Desenvolvimento na F1RST Digital Services (Grupo Santander)</strong>, focado em engenharia back-end com <strong class="text-slate-900 dark:text-white">Java e Spring Boot</strong>, criação e manutenção de APIs REST e testes automatizados com <strong class="text-slate-900 dark:text-white">JUnit</strong>.
+          </p>
+          <p>
+            Anteriormente, atuei por 11 meses como <strong class="text-slate-900 dark:text-white">Estagiário de TI no INSS</strong>, desenvolvendo automações de planilhas e processos internos com <strong class="text-slate-900 dark:text-white">Python</strong> e <strong class="text-slate-900 dark:text-white">Excel Script (TypeScript)</strong>, bots operacionais, dashboards gerenciais e apoio na implantação de sistemas com interface SAP.
+          </p>
+          <p>
+            Uno base sólida em back-end corporativo com foco prático em <strong class="text-slate-900 dark:text-white">automação de workflows (n8n)</strong>, <strong class="text-slate-900 dark:text-white">Agentes de IA</strong>, <strong class="text-slate-900 dark:text-white">Desenvolvimento Seguro</strong> e <strong class="text-slate-900 dark:text-white">AWS</strong> — trajetória validada pelo 1º lugar no Hackathon de Inteligência Artificial e Automação da ATRIA Corp.
+          </p>
+        </div>
+      </div>
+
+      <div class="rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-6 sm:p-8 shadow-sm flex flex-col justify-between gap-6">
+        <div class="space-y-4">
+          <div class="flex items-center gap-2.5 pb-3 border-b border-slate-100 dark:border-slate-800">
+            <i data-lucide="graduation-cap" class="w-5 h-5 text-navy-700 dark:text-sky-400"></i>
+            <h2 class="font-serif text-2xl font-bold tracking-tight">Formação</h2>
+          </div>
+          <div class="space-y-1.5">
+            <p class="font-semibold text-slate-900 dark:text-white leading-snug">Bacharelado em Sistemas de Informação</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Universidade São Judas Tadeu (USJT)</p>
+            <p class="text-xs font-mono text-navy-700 dark:text-sky-400 pt-1">2024 – 2027 · Em andamento</p>
+          </div>
+        </div>
+
+        <div class="pt-5 border-t border-slate-100 dark:border-slate-800 space-y-3">
+          <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+            <i data-lucide="languages" class="w-4 h-4 text-navy-700 dark:text-sky-400"></i>
+            <span>Idiomas</span>
+          </div>
+          <div class="space-y-2.5 text-sm">
+            <div class="flex items-center justify-between">
+              <span class="font-medium text-slate-700 dark:text-slate-200">Português</span>
+              <span class="text-xs font-mono px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Nativo</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium text-slate-700 dark:text-slate-200">Inglês</span>
+              <span class="text-xs font-mono px-2.5 py-0.5 rounded-md bg-navy-50 dark:bg-slate-800 text-navy-700 dark:text-sky-300">Intermediário</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reconhecimento: Campeão do Hackathon (após Formação) -->
+    <section id="reconhecimento" class="scroll-mt-24 rounded-3xl bg-white dark:bg-slate-900/90 border border-amber-200/80 dark:border-amber-900/50 p-6 sm:p-8 shadow-sm">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+        <div class="flex items-start gap-4">
+          <div class="shrink-0 w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-950/70 border border-amber-200/80 dark:border-amber-800/60 text-amber-700 dark:text-amber-300 flex items-center justify-center">
+            <i data-lucide="trophy" class="w-6 h-6"></i>
+          </div>
+          <div class="space-y-1.5">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-xs font-mono font-semibold uppercase tracking-wider text-amber-800 dark:text-amber-300">Premiação · 1º Lugar</span>
+              <span class="text-xs font-mono text-slate-400">·</span>
+              <span class="text-xs font-mono text-slate-500 dark:text-slate-400">ATRIA Corp</span>
+            </div>
+            <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-950 dark:text-white leading-snug">
+              Campeão do Hackathon de Inteligência Artificial e Automação
+            </h2>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
+              Conquista do 1º lugar no Hackathon promovido pela ATRIA Corp, desenvolvendo em equipe uma solução prática de inteligência artificial e automação sob prazo intensivo.
+            </p>
+          </div>
+        </div>
+        <a href="https://www.linkedin.com/in/geovaneaugusto/" target="_blank" rel="noopener noreferrer" class="no-print shrink-0 w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold border border-amber-200 dark:border-amber-800/70 bg-amber-50/70 dark:bg-amber-950/50 text-amber-900 dark:text-amber-200 hover:bg-amber-100 dark:hover:bg-amber-900/50 transition-colors">
+          <span>Ver no LinkedIn</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Experiência Profissional em Linha do Tempo -->
+    <section id="experiencia" class="scroll-mt-24 space-y-6">
+      <div class="flex items-center gap-2.5">
+        <i data-lucide="briefcase" class="w-5 h-5 text-navy-700 dark:text-sky-400"></i>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight">Experiência Profissional</h2>
+      </div>
+
+      <div class="relative pl-5 sm:pl-8 border-l-2 border-slate-200 dark:border-slate-800 space-y-6">
+        <!-- F1RST -->
+        <article class="relative rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-6 sm:p-8 shadow-sm">
+          <span class="absolute -left-[27px] sm:-left-[39px] top-8 w-3.5 h-3.5 rounded-full bg-navy-700 dark:bg-sky-500 ring-4 ring-[#F8FAFC] dark:ring-[#090D16]"></span>
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+            <div>
+              <h3 class="text-lg font-bold text-slate-950 dark:text-white">Estagiário de Desenvolvimento</h3>
+              <p class="text-sm font-semibold text-navy-700 dark:text-sky-400">F1RST Digital Services (Grupo Santander)</p>
+            </div>
+            <div class="text-xs font-mono text-slate-500 dark:text-slate-400 sm:text-right shrink-0">
+              <p class="font-semibold text-slate-700 dark:text-slate-300">jun. de 2025 – Atual</p>
+              <p>São Paulo, SP · Híbrido</p>
+            </div>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc pl-5">
+            <li>Desenvolvimento de sistemas back-end em Java para soluções corporativas.</li>
+            <li>Criação, integração e manutenção de APIs REST utilizando Spring Boot.</li>
+            <li>Desenvolvimento e execução de testes automatizados com JUnit e práticas de desenvolvimento seguro.</li>
+          </ul>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-navy-50 dark:bg-slate-800 text-navy-700 dark:text-sky-300">Java</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-navy-50 dark:bg-slate-800 text-navy-700 dark:text-sky-300">Spring Boot</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">APIs REST</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">JUnit</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Security Champions</span>
+          </div>
+        </article>
+
+        <!-- INSS -->
+        <article class="relative rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-6 sm:p-8 shadow-sm">
+          <span class="absolute -left-[27px] sm:-left-[39px] top-8 w-3.5 h-3.5 rounded-full bg-slate-400 dark:bg-slate-600 ring-4 ring-[#F8FAFC] dark:ring-[#090D16]"></span>
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+            <div>
+              <h3 class="text-lg font-bold text-slate-950 dark:text-white">Estagiário de TI</h3>
+              <p class="text-sm font-semibold text-navy-700 dark:text-sky-400">INSS — Instituto Nacional do Seguro Social</p>
+            </div>
+            <div class="text-xs font-mono text-slate-500 dark:text-slate-400 sm:text-right shrink-0">
+              <p class="font-semibold text-slate-700 dark:text-slate-300">ago. de 2024 – jun. de 2025</p>
+              <p>São Paulo, SP · 11 meses</p>
+            </div>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc pl-5">
+            <li>Automação de planilhas e processos operacionais utilizando Excel Script (TypeScript) e Python.</li>
+            <li>Desenvolvimento de bots voltados para ganho de agilidade e redução de etapas manuais.</li>
+            <li>Criação de dashboards para acompanhamento de indicadores e apoio na implantação de sistema com interface SAP.</li>
+          </ul>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Python</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Excel Script (TypeScript)</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Automação &amp; Bots</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Dashboards</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projetos & Destaques -->
+    <section id="projetos" class="scroll-mt-24 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="folder-git-2" class="w-5 h-5 text-navy-700 dark:text-sky-400"></i>
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight">Projetos &amp; Destaques</h2>
+            <p id="projectsCount" class="text-xs font-mono text-slate-500 dark:text-slate-400">Exibindo 7 projetos</p>
+          </div>
+        </div>
+
+        <div id="projectFilters" class="no-print flex flex-wrap gap-2"></div>
+      </div>
+
+      <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+    </section>
+
+    <!-- Certificações -->
+    <section id="certificacoes" class="scroll-mt-24 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="award" class="w-5 h-5 text-navy-700 dark:text-sky-400"></i>
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight">Licenças &amp; Certificações</h2>
+            <p id="certsCount" class="text-xs font-mono text-slate-500 dark:text-slate-400">Exibindo 12 certificações principais</p>
+          </div>
+        </div>
+
+        <div class="no-print relative">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+          <input id="certSearch" type="text" placeholder="Buscar certificação..." class="w-full sm:w-56 pl-9 pr-3 py-1.5 rounded-xl text-sm border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-navy-700/30" />
+        </div>
+      </div>
+
+      <div id="certFilters" class="no-print flex flex-wrap gap-2"></div>
+      <div id="certsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5"></div>
+    </section>
+
+    <!-- Stack Técnica -->
+    <section id="stack" class="scroll-mt-24 space-y-6">
+      <div class="flex items-center gap-2.5">
+        <i data-lucide="cpu" class="w-5 h-5 text-navy-700 dark:text-sky-400"></i>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight">Competências Técnicas</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm space-y-3">
+          <h3 class="text-xs font-bold text-navy-700 dark:text-sky-400 uppercase tracking-wider">Back-End &amp; APIs</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-navy-50 dark:bg-slate-800 text-navy-700 dark:text-sky-300">Java</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-navy-50 dark:bg-slate-800 text-navy-700 dark:text-sky-300">Spring Boot</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-navy-50 dark:bg-slate-800 text-navy-700 dark:text-sky-300">JUnit</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">APIs REST</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MySQL</span>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm space-y-3">
+          <h3 class="text-xs font-bold text-navy-700 dark:text-sky-400 uppercase tracking-wider">Automação &amp; Inteligência Artificial</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-navy-50 dark:bg-slate-800 text-navy-700 dark:text-sky-300">Python</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-navy-50 dark:bg-slate-800 text-navy-700 dark:text-sky-300">n8n</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-navy-50 dark:bg-slate-800 text-navy-700 dark:text-sky-300">Agentes de IA</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Excel Script (TypeScript)</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Integração de Sistemas</span>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm space-y-3">
+          <h3 class="text-xs font-bold text-navy-700 dark:text-sky-400 uppercase tracking-wider">Cloud, Segurança &amp; Dados</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300">AWS Cloud Foundations</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300">Desenvolvimento Seguro</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Dashboards</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Modelagem de Dados</span>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm space-y-3">
+          <h3 class="text-xs font-bold text-navy-700 dark:text-sky-400 uppercase tracking-wider">Web, Mobile &amp; Práticas</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">TypeScript</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">HTML5 &amp; CSS3</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Flutter</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">C++</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Git &amp; GitHub</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Scrum</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">UX Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato Executivo -->
+    <section id="contato" class="scroll-mt-24 rounded-3xl bg-navy-900 text-white border border-slate-800 p-6 sm:p-10 shadow-sm">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div class="space-y-2 max-w-xl">
+          <p class="text-xs font-mono uppercase tracking-widest text-sky-400">Contato &amp; Currículo</p>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight">Vamos conversar?</h2>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+            Disponível para conexões, projetos em desenvolvimento back-end, automação inteligente e oportunidades em tecnologia (São Paulo ou remoto).
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <button id="downloadCvFooter" type="button" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-sky-600 hover:bg-sky-500 text-white transition-colors">
+            <i data-lucide="file-down" class="w-4 h-4"></i>
+            <span>Baixar Currículo (PDF)</span>
+          </button>
+          <button id="copyEmailFooter" type="button" class="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-slate-800 hover:bg-slate-700 text-white transition-colors break-all sm:break-normal">
+            <i data-lucide="copy" class="w-4 h-4"></i>
+            <span>geovaneaugusto0703@gmail.com</span>
+          </button>
+          <a href="https://www.linkedin.com/in/geovaneaugusto/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-slate-800 hover:bg-slate-700 text-white transition-colors">
+            <i data-lucide="linkedin" class="w-4 h-4"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/Geo0703" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-slate-800 hover:bg-slate-700 text-white transition-colors">
+            <i data-lucide="github" class="w-4 h-4"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="max-w-5xl mx-auto px-4 sm:px-6 pb-10 text-center text-xs font-mono text-slate-500 dark:text-slate-400">
+    <p>Geovane Augusto Costa dos Santos · geo0703.github.io/Geo0703 · São Paulo, Brasil</p>
+  </footer>
+
+  <!-- Modal de Detalhes do Projeto -->
+  <div id="projectModal" class="no-print fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/65 p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="w-full max-w-lg rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-7 shadow-xl space-y-4">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <span id="modalCategory" class="inline-block text-xs font-mono font-semibold px-2.5 py-0.5 rounded-md bg-navy-50 dark:bg-slate-800 text-navy-700 dark:text-sky-300"></span>
+          <h3 id="modalTitle" class="mt-2 font-serif text-xl font-bold text-slate-900 dark:text-white"></h3>
+        </div>
+        <button id="closeModalBtn" type="button" aria-label="Fechar detalhes" class="p-1.5 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <p id="modalDesc" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+      <div id="modalTags" class="flex flex-wrap gap-2"></div>
+      <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-end gap-3">
+        <button id="closeModalSecondary" type="button" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">Fechar</button>
+        <a id="modalLink" href="https://github.com/Geo0703" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold bg-navy-700 hover:bg-navy-800 dark:bg-sky-600 dark:hover:bg-sky-500 text-white">
+          <span id="modalLinkText">Ver no GitHub</span>
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast de Feedback -->
+  <div id="toast" class="no-print fixed bottom-5 right-5 z-50 hidden items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-medium shadow-lg">
+    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 dark:text-emerald-600"></i>
+    <span id="toastMessage">Pronto!</span>
+  </div>
+
+  <script>
+    const RESUME_PDF_BASE64 = "__RESUME_PDF_BASE64__";
+    const RESUME_PDF_FILENAME = "Curriculo_Geovane_Augusto.pdf";
+    const RESUME_PDF_STATIC_PATH = "./curriculo_geovane_augusto.pdf";
+
+    const PROJECTS = [
+      {
+        id: 'hackathon-atria',
+        title: 'Hackathon de IA e Automação — 1º Lugar',
+        category: 'Automação & IA',
+        badge: 'Premiação · ATRIA Corp',
+        summary: 'Projeto vencedor em 1º lugar no Hackathon de Inteligência Artificial e Automação promovido pela ATRIA Corp.',
+        details: 'Solução desenvolvida em equipe durante o Hackathon de Inteligência Artificial e Automação da ATRIA Corp, aplicando raciocínio estruturado, automação inteligente e trabalho colaborativo sob prazo intensivo para conquistar o 1º lugar.',
+        tags: ['Inteligência Artificial', 'Automação', 'Resolução de Problemas'],
+        url: 'https://www.linkedin.com/in/geovaneaugusto/',
+        linkLabel: 'Ver destaque no LinkedIn'
+      },
+      {
+        id: 'espchat',
+        title: 'EspChat',
+        category: 'Hardware / IoT',
+        badge: 'C++ · 2 estrelas',
+        summary: 'Mini central de mensagens portátil desenvolvida em C++ para hardware embarcado.',
+        details: 'Projeto autoral em C++ focado em comunicação portátil em dispositivos embarcados, explorando redes locais, protocolos leves e programação de baixo nível. Repositório com 2 estrelas no GitHub.',
+        tags: ['C++', 'IoT / Embarcados', 'Redes'],
+        url: 'https://github.com/Geo0703/EspChat',
+        linkLabel: 'Ver repositório no GitHub'
+      },
+      {
+        id: 'pulseflow',
+        title: 'Pulseflow',
+        category: 'Web & TypeScript',
+        badge: 'TypeScript · Ativo',
+        summary: 'Aplicação web em TypeScript em desenvolvimento ativo no GitHub.',
+        details: 'Repositório recente em TypeScript focado em arquitetura front-end moderna e organização de fluxos de trabalho na web.',
+        tags: ['TypeScript', 'Desenvolvimento Web'],
+        url: 'https://github.com/Geo0703/Pulseflow',
+        linkLabel: 'Ver repositório no GitHub'
+      },
+      {
+        id: 'taskflow',
+        title: 'Taskflow',
+        category: 'Web & TypeScript',
+        badge: 'TypeScript',
+        summary: 'Aplicação para organização e acompanhamento de tarefas desenvolvida em TypeScript.',
+        details: 'Projeto voltado à produtividade e gestão de fluxo de tarefas construído em TypeScript, aplicando boas práticas de componentização e tipagem estática.',
+        tags: ['TypeScript', 'Gestão de Tarefas'],
+        url: 'https://github.com/Geo0703/Taskflow',
+        linkLabel: 'Ver repositório no GitHub'
+      },
+      {
+        id: 'automacao-python',
+        title: 'Automação em Python',
+        category: 'Automação & IA',
+        badge: 'Python · PyAutoGUI',
+        summary: 'Coleção de scripts de automação em Python utilizando PyAutoGUI para rotinas repetitivas.',
+        details: 'Conjunto de automações criadas em Python para reduzir esforço manual em tarefas operacionais e acelerar rotinas do dia a dia.',
+        tags: ['Python', 'PyAutoGUI', 'Automação'],
+        url: 'https://github.com/Geo0703/Automacao-em-Python',
+        linkLabel: 'Ver repositório no GitHub'
+      },
+      {
+        id: 'scripts-excel',
+        title: 'Scripts para Automação de Excel',
+        category: 'Automação & IA',
+        badge: 'TypeScript · Excel Script',
+        summary: 'Scripts em TypeScript para automatizar tratamento de planilhas e fluxos no Excel.',
+        details: 'Biblioteca prática de scripts desenvolvidos com Excel Script (TypeScript) para padronizar dados, eliminar etapas manuais e acelerar geração de relatórios.',
+        tags: ['TypeScript', 'Excel Script', 'Produtividade'],
+        url: 'https://github.com/Geo0703/Scripts-Para-Automacao-de-Excel',
+        linkLabel: 'Ver repositório no GitHub'
+      },
+      {
+        id: 'sistema-orcamentos',
+        title: 'Sistema de Orçamentos',
+        category: 'Java & Back-End',
+        badge: 'Java',
+        summary: 'Aplicação em Java para estruturação e cálculo de orçamentos.',
+        details: 'Sistema desenvolvido em Java aplicando Programação Orientada a Objetos e modelagem de regras de negócio para gerenciamento de orçamentos.',
+        tags: ['Java', 'POO', 'Back-End'],
+        url: 'https://github.com/Geo0703/Sistema_de_Orcamentos',
+        linkLabel: 'Ver repositório no GitHub'
+      }
+    ];
+
+    const CERTIFICATIONS = [
+      { title: 'AWS Academy Graduate - Cloud Foundations', issuer: 'Amazon Web Services (AWS)', date: 'out. 2026', category: 'Cloud & Segurança' },
+      { title: 'User Experience Design Fundamentals', issuer: 'IBM', date: 'out. 2026', category: 'Automação & UX' },
+      { title: 'N8N — Automações com N8N e IA', issuer: 'OneBitCode', date: 'jun. 2026', category: 'Automação & UX' },
+      { title: 'PCP Federado - Baixa Plataforma', issuer: 'F1RST Digital Services', date: 'set. 2025', category: 'Engenharia & TI' },
+      { title: 'Java: aplicando a Orientação a Objetos', issuer: 'Alura', date: 'ago. 2025', category: 'Desenvolvimento' },
+      { title: 'Security Champions - Desenvolvimento Seguro', issuer: 'F1RST Digital Services', date: 'jul. 2025', category: 'Cloud & Segurança' },
+      { title: 'Java: criando a sua primeira aplicação', issuer: 'Alura', date: 'jul. 2025', category: 'Desenvolvimento' },
+      { title: 'Modelos, métodos e técnicas da engenharia de software', issuer: 'Universidade São Judas Tadeu', date: 'jun. 2025', category: 'Engenharia & TI' },
+      { title: 'Python I - Introdução ao Python', issuer: 'OneBitCode', date: 'jan. 2025', category: 'Desenvolvimento' },
+      { title: 'MTA: HTML5 Application Development Fundamentals', issuer: 'OneBitCode', date: 'dez. 2024', category: 'Desenvolvimento' },
+      { title: 'Análise de Dados e Programação em Python', issuer: 'UNISUL', date: 'jul. 2024', category: 'Desenvolvimento' },
+      { title: 'Scrum Fundamentals Certified', issuer: 'SCRUMstudy', date: 'Ágil', category: 'Engenharia & TI' }
+    ];
+
+    const PROJECT_CATEGORIES = ['Todos', 'Automação & IA', 'Java & Back-End', 'Web & TypeScript', 'Hardware / IoT'];
+    const CERT_CATEGORIES = ['Todas', 'Cloud & Segurança', 'Desenvolvimento', 'Automação & UX', 'Engenharia & TI'];
+
+    let activeProjectCat = 'Todos';
+    let activeCertCat = 'Todas';
+    let certQuery = '';
+    let toastTimer = null;
+
+    function applyTheme(isDark) {
+      document.documentElement.classList.toggle('dark', isDark);
+      const sun = document.getElementById('themeIconSun');
+      const moon = document.getElementById('themeIconMoon');
+      if (sun && moon) {
+        sun.classList.toggle('hidden', !isDark);
+        moon.classList.toggle('hidden', isDark);
+      }
+      try {
+        localStorage.setItem('ga-portfolio-theme', isDark ? 'dark' : 'light');
+      } catch (e) {}
+    }
+
+    function initTheme() {
+      let saved = null;
+      try {
+        saved = localStorage.getItem('ga-portfolio-theme');
+      } catch (e) {}
+      applyTheme(saved === 'dark');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMessage');
+      if (!toast || !toastMsg) return;
+      toastMsg.textContent = msg;
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 2800);
+    }
+
+    function downloadResumePdf() {
+      if (RESUME_PDF_BASE64 && RESUME_PDF_BASE64 !== '__RESUME_PDF_BASE64__') {
+        try {
+          const byteChars = atob(RESUME_PDF_BASE64);
+          const byteNumbers = new Array(byteChars.length);
+          for (let i = 0; i < byteChars.length; i++) {
+            byteNumbers[i] = byteChars.charCodeAt(i);
+          }
+          const blob = new Blob([new Uint8Array(byteNumbers)], { type: 'application/pdf' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = RESUME_PDF_FILENAME;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          setTimeout(() => URL.revokeObjectURL(url), 1500);
+          showToast('Download do currículo iniciado!');
+          return;
+        } catch (err) {}
+      }
+      const link = document.createElement('a');
+      link.href = RESUME_PDF_STATIC_PATH;
+      link.download = RESUME_PDF_FILENAME;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast('Download do currículo iniciado!');
+    }
+
+    function copyEmail() {
+      const email = 'geovaneaugusto0703@gmail.com';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(() => {
+          showToast('E-mail copiado: ' + email);
+        }).catch(() => fallbackCopy(email));
+      } else {
+        fallbackCopy(email);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        showToast('E-mail copiado: ' + text);
+      } catch (e) {
+        showToast('E-mail: ' + text);
+      }
+      document.body.removeChild(textarea);
+    }
+
+    function renderProjectFilters() {
+      const container = document.getElementById('projectFilters');
+      if (!container) return;
+      container.innerHTML = PROJECT_CATEGORIES.map((cat) => {
+        const isActive = cat === activeProjectCat;
+        const cls = isActive
+          ? 'bg-navy-700 dark:bg-sky-600 text-white border-navy-700 dark:border-sky-600'
+          : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800';
+        return `<button type="button" data-project-cat="${cat}" class="px-3 py-1.5 rounded-xl text-xs font-semibold border transition-colors ${cls}">${cat}</button>`;
+      }).join('');
+    }
+
+    function renderProjects() {
+      const grid = document.getElementById('projectsGrid');
+      const countEl = document.getElementById('projectsCount');
+      if (!grid) return;
+
+      const filtered = activeProjectCat === 'Todos'
+        ? PROJECTS
+        : PROJECTS.filter((p) => p.category === activeProjectCat);
+
+      if (countEl) {
+        countEl.textContent = `Exibindo ${filtered.length} ${filtered.length === 1 ? 'projeto' : 'projetos'}`;
+      }
+
+      grid.innerHTML = filtered.map((p) => `
+        <article class="group rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm hover:border-navy-700/60 dark:hover:border-sky-500 transition-all flex flex-col justify-between gap-4">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-[11px] font-mono font-semibold px-2.5 py-0.5 rounded-md bg-navy-50 dark:bg-slate-800 text-navy-700 dark:text-sky-300">${p.category}</span>
+              <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400">${p.badge}</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-950 dark:text-white group-hover:text-navy-700 dark:group-hover:text-sky-400 transition-colors">${p.title}</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">${p.summary}</p>
+          </div>
+          <div class="space-y-3">
+            <div class="flex flex-wrap gap-1.5">
+              ${p.tags.map((t) => `<span class="px-2 py-0.5 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">${t}</span>`).join('')}
+            </div>
+            <div class="no-print flex items-center justify-between pt-2.5 border-t border-slate-100 dark:border-slate-800">
+              <button type="button" data-open-project="${p.id}" class="text-xs font-semibold text-navy-700 dark:text-sky-400 hover:underline">
+                Ver detalhes
+              </button>
+              <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+                <span>Abrir link</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function openProjectModal(projectId) {
+      const p = PROJECTS.find((item) => item.id === projectId);
+      const modal = document.getElementById('projectModal');
+      if (!p || !modal) return;
+      document.getElementById('modalCategory').textContent = `${p.category} · ${p.badge}`;
+      document.getElementById('modalTitle').textContent = p.title;
+      document.getElementById('modalDesc').textContent = p.details;
+      document.getElementById('modalTags').innerHTML = p.tags.map(
+        (t) => `<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">${t}</span>`
+      ).join('');
+      const link = document.getElementById('modalLink');
+      link.href = p.url;
+      document.getElementById('modalLinkText').textContent = p.linkLabel;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeProjectModal() {
+      const modal = document.getElementById('projectModal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function renderCertFilters() {
+      const container = document.getElementById('certFilters');
+      if (!container) return;
+      container.innerHTML = CERT_CATEGORIES.map((cat) => {
+        const isActive = cat === activeCertCat;
+        const cls = isActive
+          ? 'bg-navy-700 dark:bg-sky-600 text-white border-navy-700 dark:border-sky-600'
+          : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800';
+        return `<button type="button" data-cert-cat="${cat}" class="px-3 py-1.5 rounded-xl text-xs font-semibold border transition-colors ${cls}">${cat}</button>`;
+      }).join('');
+    }
+
+    function renderCerts() {
+      const grid = document.getElementById('certsGrid');
+      const countEl = document.getElementById('certsCount');
+      if (!grid) return;
+
+      const q = certQuery.trim().toLowerCase();
+      const filtered = CERTIFICATIONS.filter((c) => {
+        const matchCat = activeCertCat === 'Todas' || c.category === activeCertCat;
+        const matchText = !q || c.title.toLowerCase().includes(q) || c.issuer.toLowerCase().includes(q);
+        return matchCat && matchText;
+      });
+
+      if (countEl) {
+        countEl.textContent = `Exibindo ${filtered.length} de ${CERTIFICATIONS.length} certificações principais`;
+      }
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 p-6 text-center text-sm text-slate-500 dark:text-slate-400">
+            Nenhuma certificação encontrada para esse filtro.
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map((c) => `
+        <div class="rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-4 shadow-sm flex flex-col justify-between gap-2">
+          <div>
+            <span class="text-[11px] font-mono font-semibold text-navy-700 dark:text-sky-400">${c.category}</span>
+            <h3 class="mt-1 text-sm font-bold text-slate-900 dark:text-white leading-snug">${c.title}</h3>
+          </div>
+          <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+            <span class="font-medium text-slate-700 dark:text-slate-300 truncate pr-2">${c.issuer}</span>
+            <span class="font-mono shrink-0">${c.date}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      renderProjectFilters();
+      renderProjects();
+      renderCertFilters();
+      renderCerts();
+      if (window.lucide) lucide.createIcons();
+
+      document.getElementById('themeToggle').addEventListener('click', () => {
+        const isDark = document.documentElement.classList.contains('dark');
+        applyTheme(!isDark);
+      });
+
+      const mobileMenu = document.getElementById('mobileMenu');
+      document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+
+      document.getElementById('downloadCvNav').addEventListener('click', downloadResumePdf);
+      document.getElementById('downloadCvHero').addEventListener('click', downloadResumePdf);
+      document.getElementById('downloadCvFooter').addEventListener('click', downloadResumePdf);
+      document.getElementById('downloadCvMobile').addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        downloadResumePdf();
+      });
+
+      document.getElementById('printBtn').addEventListener('click', () => window.print());
+      document.getElementById('printBtnMobile').addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        window.print();
+      });
+
+      document.getElementById('copyEmailHero').addEventListener('click', copyEmail);
+      document.getElementById('copyEmailFooter').addEventListener('click', copyEmail);
+
+      document.getElementById('projectFilters').addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-project-cat]');
+        if (!btn) return;
+        activeProjectCat = btn.getAttribute('data-project-cat');
+        renderProjectFilters();
+        renderProjects();
+      });
+
+      document.getElementById('projectsGrid').addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-open-project]');
+        if (!btn) return;
+        openProjectModal(btn.getAttribute('data-open-project'));
+      });
+
+      document.getElementById('closeModalBtn').addEventListener('click', closeProjectModal);
+      document.getElementById('closeModalSecondary').addEventListener('click', closeProjectModal);
+      document.getElementById('projectModal').addEventListener('click', (e) => {
+        if (e.target.id === 'projectModal') closeProjectModal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeProjectModal();
+      });
+
+      document.getElementById('certFilters').addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-cert-cat]');
+        if (!btn) return;
+        activeCertCat = btn.getAttribute('data-cert-cat');
+        renderCertFilters();
+        renderCerts();
+      });
+
+      document.getElementById('certSearch').addEventListener('input', (e) => {
+        certQuery = e.target.value;
+        renderCerts();
+      });
+    });
+  </script>
+</body>
+</html>

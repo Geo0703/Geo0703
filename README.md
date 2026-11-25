@@ -1,62 +1,39 @@
-<h1 align="left">Seja Bem-Vindo!</h1>
+# Olá, eu sou o Geovane Augusto
 
-###
+**Estagiário de Desenvolvimento na F1RST Digital Services (Grupo Santander)** · Graduando em **Sistemas de Informação** na Universidade São Judas Tadeu (2024–2027)
 
-<p align="left">Meu nome é Geovane, tenho 19 anos e estou cursando o terceiro semestre de Sistemas de Informação.<br> Neste perfil, pretendo apresentar meus projetos e documentar meu crescimento, tanto acadêmico quanto profissional. </p>
+[![Portfólio Web](https://img.shields.io/badge/Portf%C3%B3lio%20Web-geo0703.github.io%2FGeo0703-1E3A5F?style=for-the-badge&logo=googlechrome&logoColor=white)](https://geo0703.github.io/Geo0703/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Geovane%20Augusto-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/geovaneaugusto/)
+[![E-mail](https://img.shields.io/badge/E--mail-Contato-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:geovaneaugusto0703@gmail.com)
 
-###
+---
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Geo0703&locale=pt-br&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dark&hide_border=false&order=2" height="150" alt="languages graph"  />
-</div>
+### Sobre mim
 
-</div>
+- Atuo com **desenvolvimento back-end em Java (Spring Boot, APIs REST e testes automatizados com JUnit)** na **F1RST Digital Services (Grupo Santander)**.
+- Experiência prévia como **Estagiário de TI no INSS**, automatizando planilhas e sistemas com **Python** e **Excel Script (TypeScript)**, desenvolvendo bots, dashboards e apoiando a implantação de sistema com interface SAP.
+- **1º Lugar no Hackathon de Inteligência Artificial e Automação** promovido pela **ATRIA Corp**.
+- Foco contínuo em **Back-End**, **Automação de Workflows (n8n)**, **Agentes de IA**, **Desenvolvimento Seguro** e **Computação em Nuvem (AWS)**.
+- Confira meu currículo completo e interativo no **[Portfólio Web](https://geo0703.github.io/Geo0703/)**.
 
-###
-<hr>
-<p align="left">Conhecimento das Linguagens:</p>
+### Stack Tecnológica
 
-###
+- **Back-End & APIs:** `Java` · `Spring Boot` · `JUnit` · `APIs REST` · `MySQL`
+- **Automação & IA:** `Python` · `n8n` · `Agentes de IA` · `Excel Script (TypeScript)` · `Bots`
+- **Cloud & Segurança:** `AWS Cloud Foundations` · `Desenvolvimento Seguro (Security Champions)` · `Dashboards`
+- **Web, Mobile & Práticas:** `TypeScript` · `HTML5 & CSS3` · `Flutter` · `C++` · `Git & GitHub` · `Scrum` · `UX Design`
 
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="40" alt="java logo"  />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
-</div>
+### Certificações Principais
 
-###
-</div>
+- **AWS Academy Graduate — Cloud Foundations** *(Amazon Web Services, 2026)*
+- **User Experience Design Fundamentals** *(IBM, 2026)*
+- **N8N — Automações com N8N e IA** *(OneBitCode, 2026)*
+- **Security Champions — Desenvolvimento Seguro** *(F1RST Digital Services, 2025)*
+- **Java: Orientação a Objetos e Primeira Aplicação** *(Alura, 2025)*
+- **Scrum Fundamentals Certified** *(SCRUMstudy)*
 
-###
-<hr>
-<p align="left">Conhecimento das Plataformas:</p>
+### Conecte-se comigo
 
-###
-
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="40" alt="vscode logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" alt="mysql logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" alt="git logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" height="40" alt="wordpress logo"  />
-</div>
-
-###
-<hr>
-<p align="left">Formas de Contato:</p>
-
-###
-
-<div align="left">
-
-  <a href="https://www.linkedin.com/in/geovaneaugusto?utm_source=share&utm_campaign=share_via&utm_content=profile" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo"  />
-  </a>
-  <a href="mailto:geovaneaugusto0703@gmail.com" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="52" height="40" alt="gmail logo"  />
-  </a>
-</div>
-
-###
+- **Portfólio & Currículo PDF:** [geo0703.github.io/Geo0703](https://geo0703.github.io/Geo0703/)
+- **LinkedIn:** [linkedin.com/in/geovaneaugusto](https://www.linkedin.com/in/geovaneaugusto/)
+- **E-mail:** geovaneaugusto0703@gmail.com
