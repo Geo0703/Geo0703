@@ -13,13 +13,13 @@
 - Atuo com **desenvolvimento back-end em Java (Spring Boot, APIs REST e testes automatizados com JUnit)** na **F1RST Digital Services (Grupo Santander)**.
 - Experiência prévia como **Estagiário de TI no INSS**, automatizando planilhas e sistemas com **Python** e **Excel Script (TypeScript)**, desenvolvendo bots, dashboards e apoiando a implantação de sistema com interface SAP.
 - **1º Lugar no Hackathon de Inteligência Artificial e Automação** promovido pela **ATRIA Corp**.
-- Foco contínuo em **Back-End**, **Automação de Workflows (n8n)**, **Agentes de IA**, **Desenvolvimento Seguro** e **Computação em Nuvem (AWS)**.
+- Foco contínuo em **Back-End**, **Automação de Workflows (n8n e Power Automate)**, **Agentes de IA**, **Desenvolvimento Seguro** e **Computação em Nuvem (AWS)**.
 - Confira meu currículo completo e interativo no **[Portfólio Web](https://geo0703.github.io/Geo0703/)**.
 
 ### Stack Tecnológica
 
 - **Back-End & APIs:** `Java` · `Spring Boot` · `JUnit` · `APIs REST` · `MySQL`
-- **Automação & IA:** `Python` · `n8n` · `Agentes de IA` · `Excel Script (TypeScript)` · `Bots`
+- **Automação & IA:** `Python` · `n8n` · `Power Automate` · `Agentes de IA` · `Excel Script (TypeScript)` · `Bots`
 - **Cloud & Segurança:** `AWS Cloud Foundations` · `Desenvolvimento Seguro (Security Champions)` · `Dashboards`
 - **Web, Mobile & Práticas:** `TypeScript` · `HTML5 & CSS3` · `Flutter` · `C++` · `Git & GitHub` · `Scrum` · `UX Design`
 
